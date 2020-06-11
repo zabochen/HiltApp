@@ -6,5 +6,5 @@ import javax.inject.Inject
 class DashboardRepository @Inject constructor(
     private val networkService: NetworkService
 ) {
-    fun fetchNetworkData() = networkService.getResponse()
+    suspend fun fetchNetworkData() = networkService.fetchPosts()
 }
